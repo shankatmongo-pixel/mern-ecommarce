@@ -13,7 +13,7 @@ const Oders = () => {
 
   const getOders = async()=>{
     try {
-      const {data} = await axios.get(`http://localhost:5000/api/v1/auth/orders`)
+      const {data} = await axios.get(`https://mern-ecommarce.onrender.com/api/v1/auth/orders`)
       setOrders(data)
       console.log(orders)
     } catch (error) {
@@ -71,7 +71,7 @@ const Oders = () => {
                     {o?.products.map((p,i) => (
                             <div className="row mb-2 card p-3 flex-row">
                                 <div className="col-md-4">
-                                   <img src={`http://localhost:5000/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} 
+                                   <img src={`https://mern-ecommarce.onrender.com/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} 
                                    width="100px"
                                    height="100px"
                                    

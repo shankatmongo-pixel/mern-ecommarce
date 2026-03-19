@@ -11,7 +11,7 @@ export default function Usecategory(){
 
     const getCategories = async ()=>{
         try {
-            const {data} = await axios.get(`http://localhost:5000/api/v1/category/get-category`)
+            const {data} = await axios.get(`https://mern-ecommarce.onrender.com/api/v1/category/get-category`)
             setCategories(data?.category)
         } catch (error) {
             console.log(error)

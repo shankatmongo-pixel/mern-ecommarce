@@ -22,7 +22,12 @@ connectdb()
 const app = express();
 
 /// middleware 
-app.use(cors())
+
+app.use(cors({
+  origin: " https://mern-ecommarce.onrender.com",
+  credentials: true
+}))
+
 app.use(express.json())
 app.use(morgan('dev'))
 

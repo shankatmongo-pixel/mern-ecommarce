@@ -11,7 +11,7 @@ const SearchInput = () => {
     const handleSsubmit = async (e)=>{
          e.preventDefault();  
         try {
-              const {data} = await axios.get(`http://localhost:5000/api/v1/product/search/${value.keyword}`) 
+              const {data} = await axios.get(`https://mern-ecommarce.onrender.com/api/v1/product/search/${value.keyword}`) 
               setValue({...value, result:data}) 
               navigate ("/search");
         } catch (error) {

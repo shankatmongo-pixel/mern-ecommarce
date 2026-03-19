@@ -26,7 +26,7 @@ const ForgotPassword = () => {
     const handleSubmit= async (e)=>{
             e.preventDefault()
           try {
-            const response = await axios.post('http://localhost:5000/api/v1/auth/forgot-password/',{email,question,newPassword})
+            const response = await axios.post('https://mern-ecommarce.onrender.com/api/v1/auth/forgot-password/',{email,question,newPassword})
             if(response.data.success){
                 toast.success(response.data.message)
                

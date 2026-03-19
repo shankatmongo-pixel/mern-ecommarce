@@ -20,7 +20,7 @@ const Register = () => {
     const handleSubmit= async (e)=>{
             e.preventDefault()
           try {
-            const response = await axios.post('http://localhost:5000/api/v1/auth/register/',{name,email,password,phone,address,question})
+            const response = await axios.post('https://mern-ecommarce.onrender.com/api/v1/auth/register/',{name,email,password,phone,address,question})
             if(response.data.success){
                 toast.success(response.data.message)
                 navigate('/login')

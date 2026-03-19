@@ -23,7 +23,7 @@ const CreateProduct = () => {
 
       const getAllCategory = async ()=>{
     try {
-      const {data} = await axios.get('http://localhost:5000/api/v1/category/get-category')
+      const {data} = await axios.get('https://mern-ecommarce.onrender.com/api/v1/category/get-category')
 
       if(data?.success){
         SetCategories(data?.category)
@@ -53,7 +53,7 @@ const CreateProduct = () => {
           productData.append("photo",photo)
           productData.append("category",category)
           productData.append("shipping", shipping)
-            const {data} =  await axios.post('http://localhost:5000/api/v1/product/create-product', productData )
+            const {data} =  await axios.post('https://mern-ecommarce.onrender.com/api/v1/product/create-product', productData )
 
           if(data?.success){
            toast.success('Product Created Successfully')

@@ -56,7 +56,7 @@ const CartPage = () => {
 
     const getToken  = async ()=>{
         try {
-            const {data} =  await axios.get(`http://localhost:5000/api/v1/product/braintree/token`)
+            const {data} =  await axios.get(`https://mern-ecommarce.onrender.com/api/v1/product/braintree/token`)
 
            setClientToken(data?.clientToken);
         } catch (error) {
@@ -74,7 +74,7 @@ const CartPage = () => {
         try {
             setLoading(true)
             const {nonce} = await instance.requestPaymentMethod()
-            const {data} = await axios.post(`http://localhost:5000/api/v1/product/braintree/payment`,{nonce,cart})
+            const {data} = await axios.post(`https://mern-ecommarce.onrender.com/api/v1/product/braintree/payment`,{nonce,cart})
             setLoading(false)
             localStorage.removeItem('cart')
             setCart([])
@@ -108,7 +108,7 @@ const CartPage = () => {
                     {cart?.map( p => (
                             <div className="row mb-2 card p-3 flex-row">
                                 <div className="col-md-4">
-                                   <img src={`http://localhost:5000/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} 
+                                   <img src={`https://mern-ecommarce.onrender.com/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} 
                                    width="100px"
                                    height="100px"
                                    

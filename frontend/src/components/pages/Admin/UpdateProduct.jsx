@@ -27,7 +27,7 @@ const params = useParams()
 
         const getSingleProduct = async ()=>{
             try {
-                const {data} = await axios.get(`http://localhost:5000/api/v1/product/get-product/${params.slug}`)
+                const {data} = await axios.get(`https://mern-ecommarce.onrender.com/api/v1/product/get-product/${params.slug}`)
                 setName(data.product.name)
                 setDescription(data.product.description)
                 setPrice(data.product.price)
@@ -49,7 +49,7 @@ const params = useParams()
 
       const getAllCategory = async ()=>{
     try {
-      const {data} = await axios.get('http://localhost:5000/api/v1/category/get-category')
+      const {data} = await axios.get('https://mern-ecommarce.onrender.com/api/v1/category/get-category')
 
       if(data.success){
         SetCategories(data?.category)
@@ -79,7 +79,7 @@ const params = useParams()
           photo && productData.append("photo",photo)
           productData.append("category",category)
           
-            const {data} =  await axios.put(`http://localhost:5000/api/v1/product/update-product/${id}`,
+            const {data} =  await axios.put(`https://mern-ecommarce.onrender.com/api/v1/product/update-product/${id}`,
             productData
           )
 
@@ -101,7 +101,7 @@ const handleDelete = async ()=>{
        try {
         let answer = window.prompt('Are You Sure Want to Delete This Product') 
         if(!answer)return;
-        const {data} = await axios.delete(`http://localhost:5000/api/v1/product/delete-product/${id}`)
+        const {data} = await axios.delete(`https://mern-ecommarce.onrender.com/api/v1/product/delete-product/${id}`)
         toast.success('Product Deleted Successfully')
         navigate('/dashboard/admin/products')
        } catch (error) {
@@ -148,7 +148,7 @@ const handleDelete = async ()=>{
                 </div>
               ):(
                 <div className="text-center">
-                  <img src={`http://localhost:5000/api/v1/product/product-photo/${id}`} alt="Product Photo" height={'200px'} className='img img-responsive'/>
+                  <img src={`https://mern-ecommarce.onrender.com/api/v1/product/product-photo/${id}`} alt="Product Photo" height={'200px'} className='img img-responsive'/>
                 </div>
               )}
             </div>

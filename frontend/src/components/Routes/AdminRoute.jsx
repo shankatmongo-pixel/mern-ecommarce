@@ -10,7 +10,7 @@ export default function AdminRoute(){
 
     useEffect(()=>{
         const authCheck = async ()=>{
-      const response = await axios.get('http://localhost:5000/api/v1/auth/admin-auth')
+      const response = await axios.get('https://mern-ecommarce.onrender.com/api/v1/auth/admin-auth')
       if(response.data.ok){
         SetOk(true)
       }else{
