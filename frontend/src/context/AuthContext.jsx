@@ -1,7 +1,7 @@
 import { useState, useEffect,useContext,createContext} from "react";
 import axios from "axios";
 
-const authContextt = createContext();
+const authContext = createContext();
 
 
 
@@ -29,15 +29,15 @@ useEffect(()=>{
 
 },[])
 
-    return(<authContextt.Provider value={[auth,SetAuth]}>
+    return(<authContext.Provider value={[auth,SetAuth]}>
         {children}
-    </authContextt.Provider>)
+    </authContext.Provider>)
 } 
 
 
 // COSTOM HOOKS 
 const useAuth = ()=>{
-    return useContext(authContextt)
+    return useContext(authContext)
 }
 
 export {useAuth,AuthProvider}
