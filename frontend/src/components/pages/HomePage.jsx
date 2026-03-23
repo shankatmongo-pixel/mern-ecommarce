@@ -4,7 +4,7 @@ import Layout from '../layout/Layout'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import {Checkbox,Radio} from 'antd'
-import { prices } from '../prices'
+import { prices } from '../Prices'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../context/Cart'
 
