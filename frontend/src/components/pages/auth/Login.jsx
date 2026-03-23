@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useLocation, useNavigate } from 'react-router-dom'
 import '../../../style/authstyle.css'
-import { useAuth } from '../../../context/authContext'
+import {useAuth} from "../../../context/AuthContext"
 
 
 
