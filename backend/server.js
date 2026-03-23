@@ -24,7 +24,7 @@ const app = express();
 /// middleware 
 
 app.use(cors({
-  origin: " https://mern-ecommarce.onrender.com",
+  origin: "https://mern-ecommarce-1.onrender.com/",
   credentials: true
 }))
 
