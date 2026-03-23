@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../layout/Layout'
 import { useCart } from '../../context/Cart'
-import { useAuth } from '../../context/authContext'
+import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { AiFillWarning } from "react-icons/ai";
 import DropIn from 'braintree-web-drop-in-react'

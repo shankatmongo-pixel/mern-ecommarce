@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../layout/Layout'
 import AdminMenu from '../../layout/AdminMenu'
-import { useAuth } from '../../../context/authContext'
+import { useAuth } from '../../../context/AuthContext'
 import moment from 'moment'
 import { Select } from 'antd'
 import axios from 'axios'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../layout/Layout'
 import UserMenu from '../../layout/UserMenu'
-import { useAuth } from '../../../context/authContext'
+import {useAuth} from "../../../context/AuthContext"
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
