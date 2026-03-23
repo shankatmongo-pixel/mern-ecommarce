@@ -24,9 +24,10 @@ const app = express();
 /// middleware 
 
 app.use(cors({
-  origin: "https://mern-ecommarce-1.onrender.com/",
+  origin: "https://mern-ecommarce-1.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
-}))
+}));
 
 app.use(express.json())
 app.use(morgan('dev'))
