@@ -24,7 +24,7 @@ const Login = () => {
     const handleSubmit= async (e)=>{
             e.preventDefault()
           try {
-            const response = await axios.post('https://mern-ecommarce.onrender.com/api/v1/auth/login/',{email,password})
+            const response = await axios.post('https://mern-ecommarce.onrender.com/api/v1/auth/login',{email,password})
             if(response.data.success){
                 toast.success(response.data.message)
                 SetAuth({
