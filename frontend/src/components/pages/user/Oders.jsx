@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../../layout/Layout'
 import UserMenu from '../../layout/UserMenu'
 import axios from 'axios'
-import { useAuth } from '../../../context/authContext'
+import {useAuth} from '../../../context/AuthContext'
 import moment from 'moment'
 
 

@@ -22,9 +22,5 @@ createRoot(document.getElementById('root')).render(
     </SearchProvider>
     </AuthProvider>
     
-
-  
- 
-  
   
 )
